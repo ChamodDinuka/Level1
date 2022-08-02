@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+.btn-dark {
+  background: black !important;
+  border-color: black !important;
+}
+.nav-link {
+  margin-right: 20px !important;
+  color: black;
+}
+.navbar-light.bg-light {
+  background-color: white !important;
+}
+.headerText {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  font-size: 50px;
+}
+.subTitle {
+  font-family: 'Playfair Display';
+}
+.text {
+  font-family: 'Playfair Display';
+}
+.bg-dark.text-white.card {
+  border: none;
+}
+.headerText.card-title.h5 {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 30%;
+}
+p.subTitle.card-text {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.innerContent {
+  width: 60%;
+}
+@media only screen and (max-width: 600px) {
+  .headerText.card-title.h5 {
+    font-family: 'Playfair Display';
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  p.subTitle.card-text {
+    font-family: 'Playfair Display';
+    font-weight: 100;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .innerContent {
+    width: 100%;
+  }
+}
