@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.aboutInner {
+  text-align: center;
+  width: 70%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,6 +21,16 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.about {
+  background-color: #FFF5F1;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,15 +63,35 @@
   background-color: white !important;
 }
 .headerText {
-  font-family: 'Playfair Display';
+  font-family: 'Poppins';
   font-weight: 600;
   font-size: 50px;
+}
+.headerTextDark {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 50px;
+  color: black;
 }
 .subTitle {
   font-family: 'Playfair Display';
 }
 .text {
-  font-family: 'Playfair Display';
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+}
+.textDark {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+}
+.bottomText {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  color: #B99A5F;
 }
 .bg-dark.text-white.card {
   border: none;
@@ -68,7 +103,7 @@
   margin-top: 30%;
 }
 p.subTitle.card-text {
-  font-family: 'Playfair Display';
+  font-family: 'Poppins';
   font-weight: 400;
   font-size: 14px;
   margin-top: 20px;
@@ -85,7 +120,7 @@ p.subTitle.card-text {
     margin-top: 0;
   }
   p.subTitle.card-text {
-    font-family: 'Playfair Display';
+    font-family: 'Poppins';
     font-weight: 100;
     font-size: 13px;
     margin-top: 10px;
