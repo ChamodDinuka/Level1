@@ -2,11 +2,17 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import '../../App.css'
 import Button from 'react-bootstrap/Button';
+import { useNavigate} from 'react-router-dom';
 
 function Banner() {
+    let navigate = useNavigate();
+    const routeChange = () => {
+      let path = `booking`;
+      navigate(path);
+    };
     return (
         <Card className="bg-dark text-white">
-            <Card.Img style={{ "height": "auto", "maxHeight": 700, "minHeight": 250 }} src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmN1dHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Card image" />
+            <Card.Img style={{ "height": "auto", "maxHeight": 700, "minHeight": 280 }} src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmN1dHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Card image" />
             <Card.ImgOverlay>
                 <div className="innerContent">
                     <Card.Title className="headerText">
@@ -18,7 +24,7 @@ function Banner() {
                         For your convenience, Schedule your reservation today!
                     </Card.Text>
                 </div>
-                <Button variant="outline-light">Book now</Button>
+                <Button variant="outline-light" onClick={routeChange}>Book now</Button>
             </Card.ImgOverlay>
         </Card>
     )

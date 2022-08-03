@@ -5,8 +5,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../images/logoBlack.png'
 import Button from 'react-bootstrap/Button';
+import { useNavigate} from 'react-router-dom';
 
-function navbar() {
+function Anavbar() {
+    let navigate = useNavigate();
+    const routeChange = () => {
+      let path = `booking`;
+      navigate(path);
+    };
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -22,10 +28,10 @@ function navbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse className="justify-content-end">
           <Nav className="justify-content-end">
-            <Nav.Link href="#home" >Home</Nav.Link>
+            <Nav.Link href="/" >Home</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
             <Nav.Link href="#link">Services</Nav.Link>
-            <Button variant="dark">Book now</Button>
+            <Button variant="dark" onClick={routeChange}>Book now</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -33,4 +39,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Anavbar

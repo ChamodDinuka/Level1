@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../App.css'
+import { useNavigate} from 'react-router-dom';
 
 function Carousel() {
 
@@ -66,6 +67,11 @@ function Carousel() {
     const updateMedia = () => {
         setDesktop(window.innerWidth >= 1024);
     }
+    let navigate = useNavigate();
+    const routeChange = () => {
+      let path = `booking`;
+      navigate(path);
+    };
     return (
         <Container>
             <div className="headerTextDark" style={{ "textAlign": "center", "marginBottom": "10px", "marginTop": "10px" }}>Services</div>
@@ -82,7 +88,7 @@ function Carousel() {
                                         <Card.Text className='textDark'>
                                             {service.description}
                                         </Card.Text>
-                                        <Button variant="outline-info">MAKE A RESERVATION</Button>
+                                        <Button variant="outline-info" onClick={routeChange}>MAKE A RESERVATION</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -93,7 +99,7 @@ function Carousel() {
                 :
                 <Row>
                     <Col><FaChevronLeft className="carouselIcon" onClick={() => ScrollLeftMobile()} /></Col>
-                    <Col xs={6}>
+                    <Col xs={8}>
                         <Card>
                             <Card.Img variant="top" src={services[serviceNumber].image} />
                             <Card.Body>
@@ -101,7 +107,7 @@ function Carousel() {
                                 <Card.Text className='textDark'>
                                     {services[serviceNumber].description}
                                 </Card.Text>
-                                <Button variant="outline-info">MAKE A RESERVATION</Button>
+                                <Button variant="outline-info" onClick={routeChange}>MAKE A RESERVATION</Button>
                             </Card.Body>
                         </Card>
                     </Col>
