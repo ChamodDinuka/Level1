@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import '../../App.css'
 import Button from 'react-bootstrap/Button';
 
-function banner() {
+function Banner() {
     return (
         <Card className="bg-dark text-white">
             <Card.Img style={{ "height": "auto", "maxHeight": 700, "minHeight": 250 }} src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmN1dHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Card image" />
@@ -24,4 +24,4 @@ function banner() {
     )
 }
 
-export default banner
+export default Banner

@@ -1,14 +1,16 @@
 import React from 'react'
 import Banner from './banner'
 import About from './about'
+import Carousel from './carousel'
 
-function home() {
+function Home() {
   return (
     <div>
       <Banner />
+      <Carousel/>
       <About />
     </div>
   )
 }
 
-export default home
+export default Home

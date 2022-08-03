@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../App.css'
 
-function about() {
+function About() {
     return (
         <div className="about">
         <div className="aboutInner">
@@ -17,4 +17,4 @@ function about() {
     )
 }
 
-export default about
+export default About
