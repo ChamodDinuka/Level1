@@ -16,7 +16,7 @@ function Bookign() {
     return (
         <Row>
             <Col md={6} sm={12}>
-                {data?.selected === true ? <ReservationForm /> : <Reservation />}
+                {data?.selected === true ? <ReservationForm {...data}/> : <Reservation />}
             </Col>
             <Col md={6} sm={12}>
                 <img src={FormImage} style={{ "maxWidth": "100%" }} alt="rightImage" />

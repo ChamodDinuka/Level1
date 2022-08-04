@@ -5,8 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom'
+import ReservationModel from '../model/reservationModel'
 
-function ReservationForm() {
+function ReservationForm({selected,reservation}:ReservationModel) {
     let navigate = useNavigate();
     const confirmBooking = (e: any) => {
         e.preventDefault();
@@ -21,12 +22,12 @@ function ReservationForm() {
             </div>
             <Form onSubmit={(e) => confirmBooking(e)}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                    <Form.Select aria-label="Default select example">
-                        <option value="1">Haircut</option>
-                        <option value="2">Hair Styling</option>
-                        <option value="3">Makeup</option>
-                        <option value="4">Tatto</option>
-                        <option value="5">Coloring</option>
+                    <Form.Select aria-label="Default select example" defaultValue={reservation}>
+                        <option value="Haircut">Haircut</option>
+                        <option value="Hair Styling">Hair Styling</option>
+                        <option value="Makeup">Makeup</option>
+                        <option value="Tatto">Tatto</option>
+                        <option value="Coloring">Coloring</option>
                     </Form.Select>
                 </Form.Group>
                 <Form.Group className="mb-3">
