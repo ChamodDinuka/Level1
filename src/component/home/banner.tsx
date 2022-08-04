@@ -8,7 +8,7 @@ function Banner() {
     let navigate = useNavigate();
     const routeChange = () => {
       let path = `booking`;
-      navigate(path);
+      navigate(path,{ state: { selected: false, reservation: '' } });
     };
     return (
         <Card className="bg-dark text-white">

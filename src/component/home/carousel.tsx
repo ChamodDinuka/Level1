@@ -68,9 +68,9 @@ function Carousel() {
         setDesktop(window.innerWidth >= 1024);
     }
     let navigate = useNavigate();
-    const routeChange = () => {
+    const routeChange = (reservatioName:string) => {
       let path = `booking`;
-      navigate(path);
+      navigate(path,{ state: { selected: true, reservation: reservatioName }});
     };
     return (
         <Container>
@@ -88,7 +88,7 @@ function Carousel() {
                                         <Card.Text className='textDark'>
                                             {service.description}
                                         </Card.Text>
-                                        <Button variant="outline-info" onClick={routeChange}>MAKE A RESERVATION</Button>
+                                        <Button variant="outline-info" onClick={()=>routeChange(service.title)}>MAKE A RESERVATION</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -107,7 +107,7 @@ function Carousel() {
                                 <Card.Text className='textDark'>
                                     {services[serviceNumber].description}
                                 </Card.Text>
-                                <Button variant="outline-info" onClick={routeChange}>MAKE A RESERVATION</Button>
+                                <Button variant="outline-info" onClick={()=>routeChange(services[serviceNumber].title)}>MAKE A RESERVATION</Button>
                             </Card.Body>
                         </Card>
                     </Col>

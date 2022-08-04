@@ -11,7 +11,7 @@ function Anavbar() {
     let navigate = useNavigate();
     const routeChange = () => {
       let path = `booking`;
-      navigate(path);
+      navigate(path,{ state: { selected: false, reservation: '' }});
     };
   return (
     <Navbar bg="light" expand="lg">
