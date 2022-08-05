@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Form from 'react-bootstrap/Form';
 import '../../App.css'
 import Row from 'react-bootstrap/Row';
@@ -22,9 +22,15 @@ function ReservationForm({ selected, reservation }: ReservationModel) {
         time: "",
         email: ""
     })
+
+    useEffect(()=>{
+        reservation === null ? setData({ ...data, type: reservation  }): setData({ ...data, type: "Haircut"  })
+    },[])
+
     const handleChange = (e: any) => {
         setData({ ...data, [e.target.name]: e.target.value })
     }
+    
     const handleToken = async (token: any) => {
         const response = await axios.post('http://localhost:5000', token)
         console.log(response.status)
@@ -77,11 +83,13 @@ function ReservationForm({ selected, reservation }: ReservationModel) {
                     Total: USD 25.00
                 </div>
             </Form>
+            {data!.date! && data.email! && data.name! && data.time! && data.type! ?
             <StripeCheckout
                 stripeKey={key as string}
                 token={handleToken}
                 email={data.email}
             />
+            :<div className="textDark">Pleace Fill the form fully to proceed</div>}
         </div>
     )
 }
