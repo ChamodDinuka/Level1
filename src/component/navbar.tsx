@@ -29,8 +29,8 @@ function Anavbar() {
         <Navbar.Collapse className="justify-content-end">
           <Nav className="justify-content-end">
             <Nav.Link href="/" >Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Services</Nav.Link>
+            <Nav.Link href="/">About</Nav.Link>
+            <Nav.Link href="/">Services</Nav.Link>
             <Button variant="dark" onClick={routeChange}>Book now</Button>
           </Nav>
         </Navbar.Collapse>
